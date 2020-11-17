@@ -1,1 +1,71 @@
-/* Add your own styles */
+/*--------------Default setting---------------------------------------------------------------------------------*/
+*{
+  font-size: 18px;
+  font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif; 
+}
+/*------------------Header---------------------------------------------------------------------------------------*/
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.bkground{
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(worldmap1.png);
+	background-size: cover;
+	background-position: center;
+	display: block;
+}
+
+h1{
+	color: #FFFFFF;
+	margin-bottom: 30px;
+	font-size: 45px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+#country{
+	height: 30px;
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+	outline: none;
+	width: 400px;
+}
+
+#LookupCountry{
+	height: 30px;
+	width: 150px;
+	background: #9b111e;
+	border: none;
+	color: #000;
+	border-radius: 25px;
+	display: inline;
+}
+
+#LookupCities{
+	height: 30px;
+	width: 150px;
+	background: #002366;
+	border: none;
+	color: #000;
+	border-radius: 25px;
+	display: inline;
+}
+
+#LookupCities:hover, #LookupCountry:hover{
+	background: #565656;
+	cursor: pointer;
+}
+
+#controls{
+	background: rgba(0,0,0,0.5);
+	padding: 20px;
+	margin: auto;
+	width: 500px;
+	text-align: center;
+	align-items: center;
+}
+
+
