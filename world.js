@@ -1,32 +1,39 @@
-window.onload= function()
+
+$(document).ready(function()
 {
-	var lookbtn = document.querySelectorAll('#lookup');
+    var lookbtn = $('#lookup');
+    var lookbtn2 = $('#lookup2');
+    var result = $('#result');
 
-	//Event Listener for Lookup buttons//
+   
+    lookbtn.on('click',(function (e) 
+    {
+        e.preventDefault();
+        console.log('clicked')
 
-	lookbtn.forEach(lookbtn => {
-		lookbtn.addEventListener("click", function(e){ 
-			e.preventDefault();
-			console.log('clicked')
+        $('#country').on('keyup', function(){
+            var searchCou = $(this).val();
+        
 
-	   fetch("http://localhost/info2180-lab5/world.php")
-            .then(response => {
-                if (response.ok)
-                {
-                    return response.text()
-                } 
-                else
-                {
-            	   return Promise.reject('something went wrong!')
+            $.ajax({
+                url: "http://localhost/info2180-lab5/world.php",
+                method: "POST",
+                data: {country:searchCou},
+                success: function(data){
+                    $("#result").html(data);
                 }
-             })
-
-            .then(data => {
-        	   let result = document.querySelector('#result');
-                result.innerHTML = data;
             })
 
-            .catch(error => console.log('There was an error: ' + error));
-        });
-    });
-}
+            //.done(function(response){
+            //    result.html(response);
+            })
+
+            .fail(function(){
+                alert('There was a problem loading the database!')
+            });  
+
+        })
+    })); 
+});
+
+    

@@ -73,8 +73,57 @@ h1{
 
 #result{
 	background: rgba(192,192,192,0.4);
-	padding: auto;
 	margin: auto;
-	width: auto;
+	border: 1px soid #ddd;
+	padding: 20px;
+	width: 80%;
 }
 
+.CountryList{
+	table-layout: auto;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.CountryList td{
+ 	text-align: left;
+}
+.CountryList td, .CountryList th{
+	border: 1px soid #ddd;
+	padding: 4px;
+}
+
+.CountryList tr:nth-child(even){background-color: #f4f4f4;}
+
+.CountryList tr:hover {background-color: #ddd;}
+
+.CountryList th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: #9b111e;
+  color: white;
+}
+
+
+.CityList{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.CityList td, .CityList th{
+	border: 1px soid #ddd;
+	padding: 4px;
+}
+
+.CityList tr:nth-child(even){background-color: #f4f4f4;}
+
+.CityList tr:hover {background-color: #ddd;}
+
+.CityList th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: #002366;
+  color: white;
+}
